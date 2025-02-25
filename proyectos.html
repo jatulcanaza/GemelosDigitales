@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - DigiTwin AI</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación personalizada -->
+    <nav class="navbar navbar-expand-sm navbar-custom navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="Logo DigiTwin AI" width="30" height="30" class="d-inline-block align-top">
+            DigiTwin AI
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <h1>Proyectos</h1>
+        <button id="btnCrearProyecto" class="btn btn-primary mb-4">Crear Proyecto</button>
+
+        <!-- Formulario para crear proyectos (oculto inicialmente) -->
+        <form id="formCrearProyecto" class="mb-4" style="display: none;">
+            <div class="form-group">
+                <label for="nombreProyecto">Nombre del Proyecto</label>
+                <input type="text" class="form-control" id="nombreProyecto" required>
+            </div>
+            <div class="form-group">
+                <label for="enlaceVideo">Enlace del Video</label>
+                <input type="url" class="form-control" id="enlaceVideo" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcionProyecto">Descripción del Proyecto</label>
+                <textarea class="form-control" id="descripcionProyecto" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="documentacion">Documentación (PDF)</label>
+                <input type="file" class="form-control-file" id="documentacion" accept=".pdf" required>
+            </div>
+            <div class="form-group">
+                <label for="dataProyecto">Data del Proyecto (XLSX)</label>
+                <input type="file" class="form-control-file" id="dataProyecto" accept=".xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-success">Crear Proyecto</button>
+        </form>
+
+        <!-- Lista de proyectos creados -->
+        <div id="listaProyectos"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-center text-lg-start text-white" style="background-color: #FF7A59;">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+                        <img src="assets/logo.png" height="70" alt="Logo DigiTwin AI" loading="lazy" />
+                    </div>
+
+                    <p class="text-center">DigiTwin AI es una plataforma innovadora dedicada a proyectos de gemelos digitales con inteligencia artificial.</p>
+
+                    <ul class="list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Proyectos</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="proyectos.html" class="text-white"><i class="fas fa-project-diagram pe-3"></i>Explorar Proyectos</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="proyectos.html" class="text-white"><i class="fas fa-plus-circle pe-3"></i>Crear Proyecto</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-question-circle pe-3"></i>Preguntas Frecuentes</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-book pe-3"></i>Documentación</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Recursos</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-chart-line pe-3"></i>Estadísticas</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-tools pe-3"></i>Herramientas</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-file-download pe-3"></i>Descargas</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white"><i class="fas fa-users pe-3"></i>Comunidad</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contacto</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><i class="fas fa-map-marker-alt pe-2"></i>Ciudad, Calle, País</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-phone pe-2"></i>+123 456 789</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-envelope pe-2 mb-0"></i>info@digitwinai.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-white" href="index.html">DigiTwin AI</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End of footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
