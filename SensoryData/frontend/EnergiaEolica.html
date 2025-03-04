@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Energía Eólica</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="toggle">
+                <div class="logo">
+                    <img src="assets/images/logo1.png" alt="Logo">
+                    <h2>Sensory<span class="danger">Data</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html"><span class="material-icons-sharp danger">dashboard</span>Inicio</a>
+                <a href="EnergiaPiezolectrica.html"><span 
+                    class="material-icons-sharp danger">flash_on</span>Energía Piezoeléctrica</a>
+                <a href="EnergiaEolica.html"  class="active"><span
+                     class="material-icons-sharp danger">air</span>Energía Eólica</a>
+                <a href="EnergiaGeotermica.html"><span
+                     class="material-icons-sharp danger">terrain</span>Energía Geotérmica</a>
+                <a href="EnergiaSolar.html" ><span
+                     class="material-icons-sharp danger">wb_sunny</span>Energía Solar</a>
+                <a href="EnergiaNuclear.html" ><span
+                     class="material-icons-sharp danger">delete</span>Energía Nuclear</a>
+                <a href="combustible.html" ><span
+                        class="material-icons-sharp danger">local_gas_station</span>Energía por Combustible</a>
+                <a href="EnergiaHidroelectrica.html"><span
+                     class="material-icons-sharp danger">waves</span>Energía Hidroeléctrica</a>
+                <a href="EnergiaOceanica.html" ><span
+                     class="material-icons-sharp danger">pool</span>Energía Oceánica</a>
+                <a href="#"><span class="material-icons-sharp danger">logout</span>Logout</a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Energía Eólica</h1>
+
+            <div class="dashboard-container">
+                <!-- Descripción -->
+                <div class="card description">
+                    <h2>Energía Eólica</h2>
+                    <p>
+                        El proyecto tiene como finalidad la medición, monitoreo y
+                        visualización del comportamiento de una turbina eólica a
+                        través de dos enfoques complementarios:<br>
+                        1. Un modelo físico, que mide datos reales con sensores
+                        conectados a un sistema basado en Arduino.<br>
+                        2. Un modelo digital, que representa de manera
+                        interactiva la información obtenida a través de una
+                        simulación en Unity.<br>
+                        Este sistema permite analizar variables como la velocidad del
+                        viento, las revoluciones por minuto (RPM), el voltaje, la
+                        corriente y la potencia generada por la turbina, facilitando su
+                        monitoreo en tiempo real y su simulación en un entorno visual    
+                    </p>
+                </div>
+
+                <!-- Motor Físico -->
+                <div class="card">
+                    <img src="assets/images/Modelo_Fisico_Eolico.png" alt="Eolico">
+                    <h3>Modelo Físico</h3>
+                </div>
+
+                <!-- Sección de Documentación y Motor Digital -->
+                <div class="dashboard-container">
+                    <!-- Cuadro para el PDF -->
+                    <div class="card">
+                        <h2>Documentación en PDF</h2>
+                        <div class="document-item">
+                            <embed src="assets/docs/Informe_Eolico.pdf" type="application/pdf" width="100%"
+                                height="400px">
+                            <a href="assets/docs/Informe_Eolico.pdf" download class="download-link">Descargar
+                                PDF</a>
+                        </div>
+                    </div>
+                    <!-- Cuadro para el archivo Excel -->
+                    <div class="card">
+                        <h2>Archivo Excel</h2>
+                        <div class="document-item">
+                            <p>Descarga el archivo Excel para verlo.</p>
+                            <a href="assets/docs/Data Eolico.xlsx" download class="download-link">Descargar Excel</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sección de Excel y Video (alineados lado a lado) -->
+                <div class="dashboard-container">
+
+                    <!-- Cuadro para el motor digital (ahora alineado a la derecha) -->
+                    <div class="card">
+                        <img src="assets/images/Modelo_Digital_Eolico.png" alt="Eolico">
+                        <h3>Modelo Digital</h3>
+                    </div>
+                    <!-- Cuadro para el video de YouTube -->
+                    <div class="card">
+                        <h2>Video Explicativo</h2>
+                        <div class="document-item">
+                            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/n2c5O4CSjUI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <a href="https://youtu.be/n2c5O4CSjUI" target="_blank" class="download-link">Ver en
+                                YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/logo.png" alt="Curso de Infraestructura">
+                <h2>Proyectos de Infraestructura II</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Button and Container -->
+    <div class="chatbot-container">
+        <button id="chatbot-button" class="chatbot-button">
+            <img src="assets/images/chat.png" alt="Chatbot Icon">
+        </button>
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <h3>Chatbot</h3>
+            </div>
+            <div class="chatbot-body">
+                <div class="chatbot-messages">
+                    <!-- Aquí aparecerán los mensajes del chatbot -->
+                </div>
+                <div class="chatbot-input-container">
+                    <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+                    <button id="send-message">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
